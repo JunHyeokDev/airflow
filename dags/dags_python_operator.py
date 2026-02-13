@@ -1,7 +1,8 @@
 from airflow import DAG
 import pendulum
 from airflow.providers.standard.operators.bash import BashOperator
-from airflow.operators.python import PythonOperator
+from airflow.providers.standard.operators.python import PythonOperator
+#from airflow.operators.python import PythonOperator
 import random
 
 

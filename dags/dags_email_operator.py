@@ -16,7 +16,7 @@ with DAG(
     
     send_email_task = EmailOperator(
         task_id='send_email_task',
-        conn_id='conn_smtp_gmail',      # Airflow 3.0 실습부터 추가
+        conn_id='conn_smtp_gmail',      # Conn_id는 Airflow UI에서 Admin -> Connections 메뉴에서 생성한 SMTP Connection의 Conn_id로 설정해주세요.
         to='fixme1537@gmail.com',       # 본인의 메일 계정으로 변경해주세요.
         subject='Airflow 성공메일',
         html_content='Airflow 작업이 완료되었습니다'
