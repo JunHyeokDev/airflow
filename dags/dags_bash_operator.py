@@ -4,9 +4,6 @@ import datetime
 from airflow.providers.standard.operators.bash import BashOperator
 from airflow.operators.empty import EmptyOperator
 
-
-
-
 with DAG(
     dag_id="dags_bash_operator",
     schedule="0 0 * * *",
