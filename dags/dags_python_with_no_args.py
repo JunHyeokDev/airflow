@@ -5,6 +5,7 @@ from airflow.providers.standard.operators.python import PythonOperator
 #from airflow.operators.python import PythonOperator
 from airflow.decorators import task
 from common.common_func import regist
+from common.common_func import regist_kwargs
 
 
 with DAG(
@@ -22,7 +23,7 @@ with DAG(
     
     regist_t2 = PythonOperator(
         task_id="regist_t2",
-        python_callable=regist,
+        python_callable=regist_kwargs,
         op_kwargs={
             "name": "김영희",
             "sex": "여자",
