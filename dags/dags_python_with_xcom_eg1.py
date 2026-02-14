@@ -28,9 +28,9 @@ with DAG (
     @task(task_id='pull_xcom_task')
     def pull_xcom(**kwargs):
         ti = kwargs['ti']
-        value1 = ti.xcom_pull(key = 'key1')
-        value2 = ti.xcom_pull(key = 'key2')
-        value3 = ti.xcom_pull(key = 'key3')
+        value1 = ti.xcom_pull(key = 'key1',task_ids='push_xcom_task1')
+        value2 = ti.xcom_pull(key = 'key2',task_ids='push_xcom_task1')
+        value3 = ti.xcom_pull(key = 'key3',task_ids='push_xcom_task2')
         print(f"XCom pulled values: {value1}, {value2}, {value3}")
         
     push_xcom_1() >> push_xcom_2() >> pull_xcom()
