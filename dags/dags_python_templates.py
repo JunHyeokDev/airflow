@@ -36,4 +36,4 @@ with DAG(
         print(kwargs['data_interval_end'])
         
         
-    python_function2()
+    python_t1 >> python_function2()
