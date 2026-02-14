@@ -11,6 +11,7 @@ with DAG (
     schedule= "10 0 L * *",
     start_date=pendulum.datetime(2021, 1, 1, tz="Europe/Warsaw"),
     catchup=False,
+    user_defined_macros={'timedelta': timedelta}  # 여기에 등록!
 ) as dag:
     
     # Start_Date : 전월 말일 / End_Date : 1일전
