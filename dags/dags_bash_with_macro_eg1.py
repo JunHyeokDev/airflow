@@ -21,5 +21,5 @@ with DAG (
             'START_DATE' : '{{ data_interval_start.in_timezone("Europe/Warsaw") | ds }}',
             'END_DATE' : '{{ (data_interval_end.in_timezone("Europe/Warsaw") - timedelta(days=1) )| ds}}'
         },
-        bash_command = 'echo "Start Date: $START_DATE" && "End Date: $END_DATE"'
+        bash_command = 'echo "Start Date: $START_DATE" && echo "End Date: $END_DATE"'
     )
