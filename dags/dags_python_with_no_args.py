@@ -25,7 +25,7 @@ with DAG(
         python_callable=regist,
         op_kwargs={
             "name": "김영희",
-            "gender": "여자",
+            "sex": "여자",
             "option1": "옵션3",
             "option2": "옵션4"
         }
