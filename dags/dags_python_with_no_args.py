@@ -20,5 +20,15 @@ with DAG(
         op_args=["홍길동", "남자", "옵션1", "옵션2"],
     )
     
-    regist_t1
+    regist_t2 = PythonOperator(
+        task_id="regist_t2",
+        python_callable=regist,
+        op_kwargs={
+            "name": "김영희",
+            "gender": "여자",
+            "option1": "옵션3",
+            "option2": "옵션4"
+        }
+    )
+    regist_t2
     
